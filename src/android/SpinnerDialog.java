@@ -47,7 +47,9 @@ public class SpinnerDialog extends CordovaPlugin {
 					} else {
 						dialog = CallbackProgressDialog.show(cordova.getActivity(), title, message, true, false, null, callbackContext);
 					}
-					
+					dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+					dialog.setIndeterminate(true);
+      					dialog.setProgress(0);
 					if (title == null && message == null) {
 						dialog.setContentView(new ProgressBar(cordova.getActivity()));
 					}
