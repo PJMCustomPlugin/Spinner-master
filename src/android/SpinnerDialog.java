@@ -45,7 +45,7 @@ public class SpinnerDialog extends CordovaPlugin {
 					if (isFixed) {
 						dialog = CallbackProgressDialog.show(cordova.getActivity(), title, message, true, false, null, callbackContext);
 					} else {
-						dialog = CallbackProgressDialog.show(cordova.getActivity(), title, message, true, false, null, callbackContext);
+						dialog = ProgressDialog.show(cordova.getActivity(), title, message, true, true, onCancelListener);
 					}
 					dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
 					dialog.setIndeterminate(true);
